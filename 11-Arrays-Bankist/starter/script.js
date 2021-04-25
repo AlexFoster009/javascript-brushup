@@ -71,7 +71,7 @@ const currencies = new Map([
   ['GBP', 'Pound sterling'],
 ]);
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
 
 /////////////////////////////////////////////////
 let arr = ['a', 'b', 'c', 'd', 'e'];
@@ -107,3 +107,29 @@ console.log([...arr, ...arr2]); // This does not mutate the original array
 
 // JOIN
 console.log(letters.join('-'));
+
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+// Using a for of loop.
+
+for( const movement of movements){
+  if(movement > 0){
+    console.log(`You have deposited ${movement}`);
+  } else {
+    console.log(`You have withdrew ${movement}`);
+  }
+}
+
+// Using the foreach method to loop over the array.
+
+movements.forEach(function (movement){
+  /*
+    The foreach loop runs the callback function on ever iteration of the array.
+   */
+  if(movement > 0 ){
+    console.log(`You have deposited ${movement}`);
+  } else {
+    console.log(`You have withdrew ${movement}`);
+  }
+})
