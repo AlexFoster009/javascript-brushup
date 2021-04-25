@@ -113,9 +113,9 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 // Using a for of loop.
 
-for( const movement of movements){
+for( const [i, movement] of movements){
   if(movement > 0){
-    console.log(`You have deposited ${movement}`);
+    console.log(`Movement ${i + 1} You have deposited ${movement}`);
   } else {
     console.log(`You have withdrew ${movement}`);
   }
@@ -123,14 +123,14 @@ for( const movement of movements){
 
 // Using the foreach method to loop over the array.
 
-movements.forEach(function (movement){
+movements.forEach(function (movement, i){
   /*
     The foreach loop runs the callback function on ever iteration of the array with the current element
     // passed as an argument to the callback function.
    */
   if(movement > 0 ){
-    console.log(`You have deposited ${movement}`);
+    console.log(`Movement: ${i+ 1} You have deposited ${movement}`);
   } else {
-    console.log(`You have withdrew ${movement}`);
+    console.log(`Movement: ${i +1} You have withdrew ${movement}`);
   }
 })
