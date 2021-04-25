@@ -74,3 +74,36 @@ const currencies = new Map([
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
+let arr = ['a', 'b', 'c', 'd', 'e'];
+
+console.log(arr.slice(2));
+console.log(arr.slice(2, 4));
+
+console.log(arr.slice());
+console.log([...arr]); // This is a food way to make a shalow copy of the array.
+
+// Splice method. this works similar to slice but this mutates the original array rather
+// than making a separate copy of the array.
+
+//console.log('splice', arr.splice(2));
+arr.splice(-1); // remove the last element from the array.
+arr.splice(1, 2); // delete two element starting at position 1.
+console.log(arr);
+
+// REVERSE
+
+ arr = ['a', 'b', 'c', 'd', 'e'];
+ const arr2 = ['j', 'i', 'h', 'g', 'j'];
+
+ console.log(arr2.reverse());
+ console.log(arr2);
+
+// CONCAT
+
+const letters = arr.concat(arr2);
+console.log(letters);
+
+console.log([...arr, ...arr2]); // This does not mutate the original array
+
+// JOIN
+console.log(letters.join('-'));
