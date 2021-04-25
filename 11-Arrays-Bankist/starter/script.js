@@ -125,7 +125,8 @@ for( const movement of movements){
 
 movements.forEach(function (movement){
   /*
-    The foreach loop runs the callback function on ever iteration of the array.
+    The foreach loop runs the callback function on ever iteration of the array with the current element
+    // passed as an argument to the callback function.
    */
   if(movement > 0 ){
     console.log(`You have deposited ${movement}`);
